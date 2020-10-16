@@ -6,8 +6,8 @@
     background-size: cover;
     position: relative;
     overflow: visible;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+    /* display: -webkit-flex;
+    display: -ms-flexbox; */
     display: flex;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -92,10 +92,13 @@
       cursor: pointer;
       margin-left:5%;
       color:#C0C0C0;
+      transition: all .2s ease-in-out; 
+
   }
 
   .close:hover {
       color:#7B7474;
+      transform: scale(1.3); 
   }
 
   .button {
@@ -131,10 +134,13 @@
       padding-bottom:5px;
       padding-top:7px;
       margin:10px;
+      transition: all .2s ease-in-out; 
+
   }
 
   .special:hover {
     background-color:#cc9c9c;
+    transform: scale(1.1); 
   }
 
   .special-div {
@@ -157,7 +163,13 @@
   padding-top:0;
   border-radius:10px;
   text-align:center;
+  cursor: pointer;
+  transition: all .2s ease-in-out; 
 } 
+
+.saved-card:hover {
+  transform: scale(1.1); 
+}
 
 .saved-head {
   text-align:center;
@@ -169,6 +181,7 @@
 
 .card-divider {
   display: block;
+  position: relative;
 }
 
 .cook-time {
@@ -184,4 +197,16 @@
   width:auto;
   height:auto;
 
+}
+
+.card-close {
+  position: absolute;
+  right:10px;
+  top:5px;
+  transition: all .2s ease-in-out; 
+}
+
+.card-close:hover {
+  color:#7B7474;
+  transform: scale(1.3); 
 }

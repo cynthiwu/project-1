@@ -11,6 +11,7 @@ $(document).ready(function() {
         let ingredientLiEl = $("<li>").text(addedIngredient);
         let spanEl = $("<span>").text("x");
         spanEl.addClass("close");
+        spanEl.on("click", deleteIngredient);
         ingredientLiEl.append(spanEl);
 
         ingredientListEl.append(ingredientLiEl);
@@ -54,10 +55,23 @@ $(document).ready(function() {
         })
     }
 
+    // Function for taco button. Conducts a search for "tacos" //
 
+    function tacoRecipe() {
+        searchRecipe("tacos");
+    }
 
+    // Function for x buttons to delete ingredient items. //
+    
+    function deleteIngredient() {
+        $(this).parent().remove();
+    }
 
+    // Event Handlers - Keep all event handlers below //
 
+    $("#taco-button").on("click", tacoRecipe);
+ 
+    
     // GIVEN this website
     // WHEN I search using ingredients on hand
     // THEN I am given a list of possible recipes using those ingredients
