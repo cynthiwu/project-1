@@ -5,27 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../CSS/style.css"/>   
 
 </head>
 
 <body>
-    <div class="top-bar">
-        <h1>Results</h1>
-    </div>
-    <table>
+    <header class="subnav-hero-section">
+        <h1 class="ubnav-hero-headline">Results</h1>
+        
+    </header>  
+    
+    <!-- Table to display the results -->
+    <table class="results">
         <thead>
             <tr>
-                <th width="200">Picture of food</th>
+                <th width="250">Picture of food</th>
                 <th width="150">Food Name</th>
                 <th>Food Description</th>
-
-                <th width="150">Save?</th>
+                <th width="150">Link</th>
+                <th width="100">Total Time</th>
+                <th width="100"># of people served</th>
+                <th width="125">Save?</th>
             </tr>
         </thead>
-        <!-- first result on the table -->
-        <tbody class="stack hover">
+       
+        <tbody class="stack hover" id="table-body">
+        <!-- first result on the table -->   
             <tr id="first-result">
                 <td>
                     <img class="thumbnail"
@@ -34,6 +41,9 @@
                 </td>
                 <td id="first-name">Taco</td>
                 <td id="first-description">Delicious Tacos!</td>
+                <td id="first-link" src=""></td>
+                <td id="first-time">20 Minutes</td>
+                <td id="first-serves">Serves 4</td>
                 <td type="button" class="primary button">Save</td>
             </tr>
             <tr>
@@ -44,6 +54,7 @@
                 </td>
                 <td>Burger</td>
                 <td>Juicy Burgers</td>
+                <td id="second-link" src=""></td>
                 <td type="button" class="success button" disabled>Save</td>
             </tr>
             <tr>
@@ -55,6 +66,7 @@
                 </td>
                 <td>Pasta</td>
                 <td>Amazing pasta</td>
+                <td id="third-link" src=""></td>
                 <td type="button" class="primary button">Save</td>
             </tr>
         </tbody>
@@ -63,6 +75,10 @@
     <div>
         <button class="primary button" type="button">Clear</button>
     </div>
-</body>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+    <script src="../JS/results.js"></script>
+</body>
 </html>

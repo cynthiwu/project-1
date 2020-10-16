@@ -62,7 +62,7 @@ $(document).ready(function() {
     }
 
     // Function for x buttons to delete ingredient items. //
-    
+
     function deleteIngredient() {
         $(this).parent().remove();
     }
@@ -70,7 +70,7 @@ $(document).ready(function() {
     // Event Handlers - Keep all event handlers below //
 
     $("#taco-button").on("click", tacoRecipe);
- 
+    
     
     // GIVEN this website
     // WHEN I search using ingredients on hand
